@@ -35,6 +35,15 @@ class _ServiceSuggestionsState extends State<ServiceSuggestions> {
                 alreadySaved ? Icons.favorite : Icons.favorite_border,
                 color: alreadySaved ? Colors.red : null,
               ),
+              onTap: () {
+                setState(() {
+                  if (alreadySaved) {
+                    _saved.remove(pair);
+                  } else { 
+                    _saved.add(pair); 
+                  } 
+                });
+              },
             );
     }
 
@@ -51,12 +60,19 @@ class _ServiceSuggestionsState extends State<ServiceSuggestions> {
         return _buildRow(_suggestions[index]);
               });
         }
+
+        void _pushSaved() {
+          
+        }
         
             @override
             Widget build(BuildContext context) {
               return Scaffold(
                 appBar: AppBar(
                   title: Text('BookSmart'),
+                  actions: [
+                    IconButton(icon: Icon(Icons.list), onPressed: _pushSaved)
+                  ],
                 ),
                 body: Center(
                   child: _buildSuggestions()
