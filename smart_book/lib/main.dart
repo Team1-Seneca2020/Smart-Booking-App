@@ -8,14 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BookSmart',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('BookSmart'),
-        ),
-        body: Center(
-          child: ServiceSuggestions(),
-        ),
-      ),
+      home: ServiceSuggestions(),      
     );
   }
 }
@@ -29,11 +22,13 @@ class ServiceSuggestions extends StatefulWidget {
 class _ServiceSuggestionsState extends State<ServiceSuggestions> {
     @override
     Widget build(BuildContext context) {
-      final wordPair = WordPair.random();
-      final _suggestions = <WordPair>[];
-      final _biggerFont = TextStyle(fontSize: 18.0);
-      return Text(wordPair.asPascalCase);
-      
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('BookSmart'),
+        ),
+        body: Center(
+          child: Text('Test')
+        ),
+      );
     }
-    
 }
