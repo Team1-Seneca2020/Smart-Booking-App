@@ -21,13 +21,19 @@ class ServiceSuggestions extends StatefulWidget {
 
 class _ServiceSuggestionsState extends State<ServiceSuggestions> {
     final _suggestions = <WordPair>[];
+    final _saved = Set<WordPair>();
     final _biggerFont = TextStyle(fontSize: 18.0);
 
     Widget _buildRow(WordPair pair) {
+      final alreadySaved = _saved.contains(pair);
             return ListTile(
               title: Text(
                 pair.asPascalCase,
                 style: _biggerFont,
+              ),
+              trailing: Icon(
+                alreadySaved ? Icons.favorite : Icons.favorite_border,
+                color: alreadySaved ? Colors.red : null,
               ),
             );
     }
@@ -54,6 +60,13 @@ class _ServiceSuggestionsState extends State<ServiceSuggestions> {
                 ),
                 body: Center(
                   child: _buildSuggestions()
+                ),
+                bottomNavigationBar: BottomNavigationBar(
+                  items: <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Main')),
+                    BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('Chat')),
+                    BottomNavigationBarItem(icon: Icon(Icons.perm_contact_calendar), title: Text('Bookings')),
+                ]
                 ),
               );
             }
