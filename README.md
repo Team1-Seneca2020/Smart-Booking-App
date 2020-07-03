@@ -1,7 +1,5 @@
 # Seneca Covid-19 Response Hackathon
 
-**** _See App Live : [Link to be updated]_ ****
-
 ## Challenge Set
 
 Appointment scheduling for services, order pickups and restaurant seating. Sponsered by [CPOS](https://cpos.com/).
