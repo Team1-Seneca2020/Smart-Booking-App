@@ -6,7 +6,9 @@ Appointment scheduling for services, order pickups and restaurant seating. Spons
 
 ## Solution
 
-A smart booking app focused on small-to-mid sized business that will assist the scheduling of appointments, generate automatic notifications for scheduled bookings and keep customers in touch with service providers for a personalized experience.
+BookSmart - A smart booking app focused on small-to-mid sized business that will assist the scheduling of appointments, generate automatic notifications for scheduled bookings and keep customers in touch with service providers for a personalized experience.
+
+![Main Page](imgs/main_page.png)
 
 ### Requirements
 -	Cross-platform (Android, iOS)
@@ -32,3 +34,8 @@ A smart booking app focused on small-to-mid sized business that will assist the 
 
 **Rescheduling Suggestions**
 - If client needs to cancel, the application generates several possible alternative time slots based on the customer’s preferences and the business’ available time slots.
+
+
+
+![Mobile Listings](imgs/mobile_listings.png) &nbsp;&nbsp;&nbsp;&nbsp;
+![Mobile Listings](imgs/suggestions.png)
